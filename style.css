@@ -12,8 +12,9 @@ p { color: #fff; font-family: mononoki-Regular; font-size: 16px; line-height: 24
 p1 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
 p2 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
 p3 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
-a { color: #fff; font-family: mononoki-Regular; text-decoration: none; }
+a { color: #7DD42E; font-family: mononoki-Regular; text-decoration: none; }
 /*a:hover { color: #7DD42E; }*/
+p4 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
 p1 :hover { color: #E26066; }
 p2 :hover { color: #00B79E; }
 p3 :hover { color: #5488B6; }
