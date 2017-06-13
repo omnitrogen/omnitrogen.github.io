@@ -10,16 +10,22 @@
 body { background-color: #333; -webkit-font-smoothing: antialiased; text-align: justify}
 p { color: #fff; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 p1 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
+p2 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
+p3 { color: #7DD42E; font-family: mononoki-Regular; font-size: 16px; line-height: 24px; margin-bottom: 22px;-webkit-font-smoothing: antialiased; }
 a { color: #fff; font-family: mononoki-Regular; text-decoration: none; }
-a:hover { color: #7DD42E; }
+/*a:hover { color: #7DD42E; }*/
+p1 :hover { color: #E26066; }
+p2 :hover { color: #00B79E; }
+p3 :hover { color: #5488B6; }
+
 #profil { width: 100px; padding: 50px 0 0 0; margin: 0 auto 0 50px; }
 #about { width: 500px; padding: 0 0 0 0px; margin: 50px auto 0 100px !important; }
 .title { font-size: 65px !important; margin-bottom : 65px !important; }
 @media (max-width: 1200px) 
-	{
-   		#profil { width: 100px; padding: 50px 0 0 0; margin: 0 auto 0 50px;}
-   		#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
-	}
+  {
+      #profil { width: 100px; padding: 50px 0 0 0; margin: 0 auto 0 50px;}
+      #about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+  }
 .typed-cursor{
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
