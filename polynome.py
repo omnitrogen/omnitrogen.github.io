@@ -22,7 +22,30 @@ class Polynome(object):
         return Polynome([x + y for x, y in zip_longest(self.coefficients, autre_polynome.coefficients, fillvalue=0)])
 
     def __call__(self, x):
-        
+        px = 0
+        for i,v in enumerate(self.coefficients):
+            px += v * (x ** i)  
+        return px
         
     def deg(self):
         return self.coefficients.__len__() - 1
+
+p1 = Polynome([1,2,3])
+print(p1)
+print(p1.deg())
+p2 = Polynome([4,5,6,7])
+somme = p1 + p2
+print(somme)
+print(somme.deg())
+print(somme(4))
+
+
+class FracRat(Polynome):
+    """docstring for FracRat"""
+    def __init__(self, coeffs1, coeffs2):        
+        pass
+
+
+bruh = FracRat([33, 44, 55], [66, 77, 88, 99])
+print(bruh.poly1, bruh.poly2)
+        
