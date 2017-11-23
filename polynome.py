@@ -9,8 +9,7 @@ class Polynome(object):
         string = ''
         for i, v in enumerate(self.coefficients):
             if v != 0:
-                string += str(v) + " "
-                string += "X^" + str(i)
+                string += str(v) + " " + "X^" + str(i)
                 if i < sorted([i for i,v in enumerate(self.coefficients) if v != 0])[-1]:
                     string += " + "
             string = string.replace('X^0', '')
@@ -28,7 +27,7 @@ class Polynome(object):
         return px
         
     def deg(self):
-        return self.coefficients.__len__() - 1
+        return sorted([i for i,v in enumerate(self.coefficients) if v != 0])[-1]
 
 p1 = Polynome([1, 1, 2, 0, 0, 3, 0, 4, 0, 0, 0, 0])
 print(p1)
