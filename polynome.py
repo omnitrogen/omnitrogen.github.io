@@ -1,21 +1,21 @@
-from itertools import zip_longest
+from itertools import zip_longest, takewhile
 
 class Polynome(object):
     """docstring for Polynome"""
     def __init__(self, coefficients):
-        self.coefficients = coefficients
+        self.coefficients = [float(i) for i in coefficients]
 
     def __str__(self):
         string = ''
         for i, v in enumerate(self.coefficients):
-            if i == 0:
-                string += str(v)
-            elif i == 1:
-                string += str(v) + " X"
-            else:
-                string += str(v) + " X^" + str(i)
-            if i < self.coefficients.__len__() - 1:
-                string += " + "
+            if v != 0:
+                string += str(v) + " "
+                string += "X^" + str(i)
+                if i < sorted([i for i,v in enumerate(self.coefficients) if v != 0])[-1]:
+                    string += " + "
+            string = string.replace('X^0', '')
+            string = string.replace('X^1', 'X')
+            string = string.replace('  +', ' +')
         return string
 
     def __add__(self, autre_polynome):
@@ -30,7 +30,7 @@ class Polynome(object):
     def deg(self):
         return self.coefficients.__len__() - 1
 
-p1 = Polynome([1,2,3])
+p1 = Polynome([1, 1, 2, 0, 0, 3, 0, 4, 0, 0, 0, 0])
 print(p1)
 print(p1.deg())
 p2 = Polynome([4,5,6,7])
@@ -45,7 +45,9 @@ class FracRat(Polynome):
     def __init__(self, coeffs1, coeffs2):        
         pass
 
+    def __str__(self):
+        pass
 
 bruh = FracRat([33, 44, 55], [66, 77, 88, 99])
-print(bruh.poly1, bruh.poly2)
+print(bruh.coefficients)
         
