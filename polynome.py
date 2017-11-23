@@ -1,4 +1,4 @@
-from itertools import zip_longest, takewhile
+from itertools import zip_longest
 
 class Polynome(object):
     """docstring for Polynome"""
