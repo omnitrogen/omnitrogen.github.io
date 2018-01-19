@@ -13,10 +13,28 @@ p {
 <body>
 
 <p id="demo"></p>
+<div style="display: flex; justify-content: center; margin: 2em; font-size: 2em">
+    Rattrapages?<br/>
+</div>
+<div style="display: flex; justify-content: center">
+    <button onclick="rattrapOui()" style="align: center; margin: 1em">Oui</button>
+    <button onclick="rattrapNon()" style="align: center; margin: 1em">Non</button>
+</div>
+<p id="dur"></p>
 
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
+
+function rattrapOui() {
+    countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
+    document.getElementById("dur").innerHTML = "duuuuur"
+}
+
+function rattrapNon() {
+    countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
+    document.getElementById("dur").innerHTML = ""
+}
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -42,7 +60,8 @@ var x = setInterval(function() {
         clearInterval(x);
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
-}, 1000);
+}, 100);
+
 </script>
 
 </body>
