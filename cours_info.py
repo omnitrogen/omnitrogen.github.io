@@ -74,8 +74,8 @@ class Pile(object):
     def __init__(self):
         self.p = []
 
-    def show(self):
-        return self.p
+    def __repr__(self):
+        return str(self.p)
 
     def empiler(self, *args):
         for arg in args:
@@ -92,4 +92,5 @@ class Pile(object):
 
     def sommet(self):
         return self.p[-1]
+
 
