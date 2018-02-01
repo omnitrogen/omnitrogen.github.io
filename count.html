@@ -1,68 +1,94 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-p {
-  text-align: center;
-  font-size: 60px;
-  margin-top:0px;
-}
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="robots" content="all" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <meta http-equiv="imagetoolbar" content="false" />
+
+    <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 <body>
 
-<p id="demo"></p>
-<div style="display: flex; justify-content: center; margin: 2em; font-size: 2em">
-    Rattrapages?<br/>
-</div>
-<div style="display: flex; justify-content: center">
-    <button onclick="rattrapOui()" style="align: center; margin: 1em">Oui</button>
-    <button onclick="rattrapNon()" style="align: center; margin: 1em">Non</button>
-</div>
-<p id="dur"></p>
+    <p id="demo" style="margin: 0.5em;"></p>
 
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
+    <div style="display: flex; justify-content: center; margin: 0.5em; font-size: 2em">
+        Rattrapages?<br/>
+    </div>
+    <!-- Rounded switch -->
+    <div id="check">
+        <label class="switch">
+            <input type="checkbox" id="check_rat" onchange="update(this);">
+            <span class="slider round"></span>
+        </label>
+    </div>
 
-function rattrapOui() {
-    countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
-    document.getElementById("dur").innerHTML = "duuuuur"
-}
+    <div style="display: flex; justify-content: center; margin: 0.5em; font-size: 2em">
+        Redoublement?<br/>
+    </div>
+    <!-- Rounded switch -->
+    <div id="check">
+        <label class="switch">
+            <input type="checkbox" id="check_red" onchange="update(this);">
+            <span class="slider round"></span>
+        </label>
+    </div>
 
-function rattrapNon() {
-    countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
-    document.getElementById("dur").innerHTML = ""
-}
+    <p id="dur" style="margin: 1em">ez</p>
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
 
-    // Get todays date and time
-    var now = new Date().getTime();
-    
-    // Find the distance between now an the count down date
-    var distance = countDownDate - now;
-    
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-    
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
+    function update(feature) {
+        if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == false) {
+            countDownDate = new Date("Jun 9, 2018 20:00:00").getTime();
+            document.getElementById("dur").innerHTML = "ez"
+        }
+        if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
+            countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
+            document.getElementById("dur").innerHTML = "dur"
+        }
+        if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
+            countDownDate = new Date("Jun 9, 2019 20:00:00").getTime();
+            document.getElementById("dur").innerHTML = "gnéééé?"
+        }
+        if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
+            countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
+            document.getElementById("dur").innerHTML = "Félix sors de ce corps!"
+        }
     }
-}, 100);
 
-</script>
+    // Update the count down every 1 second
+    var x = setInterval(function() {
 
-</body>
+        // Get todays date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now an the count down date
+        var distance = countDownDate - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        // Output the result in an element with id="demo"
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+        
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "LET THE FUN BEGIN! FiNaLlY :o :o :o ";
+        }
+    }, 100);
+
+    </script>
+
+    </body>
 </html>
