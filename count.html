@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 
-<body>
+<body id="page" style="background-color: #2ecc71;">
     <p id="demo" style="margin: 0.5em;"></p>
     <div style="display: flex; justify-content: center; margin: 0.5em; font-size: 2em">
         Rattrapages?
@@ -43,23 +43,27 @@
     function update(feature) {
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 6, 2018 20:00:00").getTime();
+            document.getElementById("page").style.backgroundColor = "#2ecc71"
             document.getElementById("dur").innerHTML = "ez"
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
+            document.getElementById("page").style.backgroundColor = "orange"
             document.getElementById("dur").innerHTML = "duuuur"
         }
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 6, 2019 20:00:00").getTime();
+            document.getElementById("page").style.backgroundColor = "grey"
             document.getElementById("dur").innerHTML = "gnéééé?"
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
-            document.getElementById("dur").innerHTML = "Félix sors de ce corps!"
+            document.getElementById("page").style.backgroundColor = "#c0392b"
+            document.getElementById("dur").innerHTML = "R.I.P."
         }
     }
 
-    // Update the count down every 1 second
+    // Update the count down every second
     var x = setInterval(function() {
 
         // Get todays date and time
@@ -78,7 +82,7 @@
         document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
             minutes + "m " + seconds + "s ";
 
-        // If the count down is over, write some text 
+        // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("demo").innerHTML = "LET THE FUN BEGIN! FiNaLlY :o :o :o ";
