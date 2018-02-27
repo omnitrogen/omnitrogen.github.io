@@ -8,12 +8,18 @@
     <meta name="robots" content="all" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta http-equiv="imagetoolbar" content="false" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 
-<body id="page" style="background-color: #2ecc71; overflow: hidden;">
-    <p id="demo" style="margin: 0.5em;"></p>
-    <div style="display: flex; justify-content: center; margin: 0.5em; font-size: 2em">
+<body id="page" style="background-color: #2ecc71;">
+
+    <p id="timeRemaining"></p>
+    <p style="font-size: 25px;">avant la fin de l'année</p>
+    <p id="hoursRemaining"></p>
+    <p style="font-size: 25px;">heures de cours restantes</p>
+
+    <div style="display: flex; justify-content: center; margin: 1em; font-size: 2em">
         Rattrapages?
         <br/>
     </div>
@@ -24,7 +30,7 @@
             <span class="slider round"></span>
         </label>
     </div>
-    <div style="display: flex; justify-content: center; margin: 0.5em; font-size: 2em">
+    <div style="display: flex; justify-content: center; margin: 1em; font-size: 2em">
         Redoublement?
         <br/>
     </div>
@@ -36,6 +42,23 @@
         </label>
     </div>
     <p id="dur" style="margin: 1em">ez</p>
+
+    <script>
+        var hoursRemaining = 0;
+        function logResults(json){
+            /*console.log(json["totalHours"])*/
+            hoursRemaining = json["totalHours"]
+            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
+        }
+
+        $.ajax({
+          url: "http://omnitrogen.pythonanywhere.com/getHours",
+          dataType: "jsonp",
+          jsonpCallback: "logResults"
+        });
+    </script>
+
+
     <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Jun 6, 2018 20:00:00").getTime();
@@ -45,21 +68,25 @@
             countDownDate = new Date("Jun 6, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#2ecc71"
             document.getElementById("dur").innerHTML = "ez"
+            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "orange"
             document.getElementById("dur").innerHTML = "duuuur"
+            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
         }
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 6, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "grey"
             document.getElementById("dur").innerHTML = "gnéééé?"
+            document.getElementById("hoursRemaining").innerHTML = "gnéééé?"
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#c0392b"
             document.getElementById("dur").innerHTML = "R.I.P."
+            document.getElementById("hoursRemaining").innerHTML = "beaucoup trop d'"
         }
     }
 
@@ -78,17 +105,16 @@
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Output the result in an element with id="demo"
-        document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
-            minutes + "m " + seconds + "s ";
+        // Output the result in an element with id="timeRemaining"
+        document.getElementById("timeRemaining").innerHTML = days + "j " + hours + "h " +
+            minutes + "m " + seconds + "s";
 
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "LET THE FUN BEGIN! FiNaLlY :o :o :o ";
+            document.getElementById("timeRemaining").innerHTML = "LET THE FUN BEGIN! FiNaLlY :o :o :o ";
         }
     }, 100);
     </script>
-</body>
-
+    </body>
 </html>

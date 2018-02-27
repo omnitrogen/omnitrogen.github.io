@@ -22,6 +22,14 @@ p {
     text-align: center;
     font-size: 60px;
     margin-top: 0px;
+    margin: 0.5em;
+}
+
+#timeRemainingText {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0px;
+    margin: 1em;
 }
 
 #check {
