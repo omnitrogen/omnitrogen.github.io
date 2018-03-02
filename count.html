@@ -37,7 +37,13 @@
     <meta name="robots" content="all" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta http-equiv="imagetoolbar" content="false" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="style2.css">
 </head>
 
@@ -45,8 +51,15 @@
 
     <p id="timeRemaining"></p>
     <p style="font-size: 25px;">avant la fin de l'année</p>
-    <p id="hoursRemaining"></p>
-    <p style="font-size: 25px;">heures de cours restantes</p>
+
+
+    <div style="text-align: center; font-size: 20px; margin-top: 0px; margin: 0.5em;">
+
+    <button class="dropdown-toggle plus" id="plus" data-toggle="collapse" data-target="#demo"> Détails </button>
+
+        <div id="demo" class="collapse">
+        </div>
+    </div>
 
     <div style="display: flex; justify-content: center; margin: 1em; font-size: 2em">
         Rattrapages?
@@ -148,8 +161,23 @@
         var hoursRemaining = 0;
         function logResults(json){
             /*console.log(json["totalHours"])*/
-            hoursRemaining = json["totalHours"]
-            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
+            /*hoursRemaining = json["totalHours"]*/
+            dividedHours = json["dividedHours"]
+            form = dividedHours["Form. Culturelle"]
+            info = dividedHours["Informatique"]
+            fran = dividedHours["Français"]
+            angl = dividedHours["Anglais"]
+            tipe = dividedHours["TIPE"]
+            si = dividedHours["SI"]
+            math = dividedHours["Mathématiques"]
+            phys = dividedHours["Physique"]
+            total = form + info + fran + angl + tipe + si + math + phys
+
+            tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
+
+
+            console.log(hoursRemaining, dividedHours)
+            document.getElementById("demo").innerHTML = tableau
         }
 
         $.ajax({
@@ -157,6 +185,7 @@
           dataType: "jsonp",
           jsonpCallback: "logResults"
         });
+
     </script>
 
 
@@ -169,28 +198,24 @@
             countDownDate = new Date("Jun 6, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#2ecc71"
             document.getElementById("dur").innerHTML = "ez"
-            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
             document.getElementById("neige").style.visibility = "hidden"
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "orange"
             document.getElementById("dur").innerHTML = "duuuur"
-            document.getElementById("hoursRemaining").innerHTML = hoursRemaining
             document.getElementById("neige").style.visibility = "hidden"
         }
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 6, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "grey"
             document.getElementById("dur").innerHTML = "gnéééé?"
-            document.getElementById("hoursRemaining").innerHTML = "gnéééé?"
             document.getElementById("neige").style.visibility = "hidden"
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#c0392b"
             document.getElementById("dur").innerHTML = "R.I.P."
-            document.getElementById("hoursRemaining").innerHTML = "beaucoup trop d'"
             document.getElementById("neige").style.visibility = "visible"
         }
     }
