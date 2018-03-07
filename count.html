@@ -172,8 +172,6 @@
 
             tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
 
-
-            /*console.log(hoursRemaining, dividedHours)*/
             $("#demo").html(tableau)
         }
 
@@ -232,13 +230,13 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Output the result in an element with id="timeRemaining"
-        document.getElementById("timeRemaining").innerHTML = days + "j " + hours + "h " +
-            minutes + "m " + seconds + "s";
+        $("#timeRemaining").html(days + "j " + hours + "h " +
+            minutes + "m " + seconds + "s");
 
         // If the count down is over, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("timeRemaining").innerHTML = "LET THE FUN BEGIN! FiNaLlY :o :o :o ";
+            $("#timeRemaining").hmtl("LET THE FUN BEGIN! FiNaLlY :o :o :o ");
         }
     }, 100);
     </script>
