@@ -39,7 +39,7 @@
     <meta http-equiv="imagetoolbar" content="false" />
 
     <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
@@ -159,8 +159,6 @@
     <script>
         var hoursRemaining = 0;
         function logResults(json){
-            /*console.log(json["totalHours"])*/
-            /*hoursRemaining = json["totalHours"]*/
             dividedHours = json["dividedHours"]
             form = dividedHours["Form. Culturelle"]
             info = dividedHours["Informatique"]
@@ -175,8 +173,8 @@
             tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
 
 
-            console.log(hoursRemaining, dividedHours)
-            document.getElementById("demo").innerHTML = tableau
+            /*console.log(hoursRemaining, dividedHours)*/
+            $("#demo").html(tableau)
         }
 
         $.ajax({
@@ -186,7 +184,6 @@
         });
 
     </script>
-
 
     <script>
     // Set the date we're counting down to
