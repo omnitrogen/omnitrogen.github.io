@@ -38,9 +38,9 @@
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta http-equiv="imagetoolbar" content="false" />
 
-    <link rel="stylesheet" href="bootstrap.min.css">
     <script src="jquery-3.3.1.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="style2.css">
@@ -170,7 +170,7 @@
             phys = dividedHours["Physique"]
             total = form + info + fran + angl + tipe + si + math + phys
 
-            tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
+            var tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
 
             $("#demo").html(tableau)
         }
@@ -193,24 +193,29 @@
             document.getElementById("page").style.backgroundColor = "#2ecc71"
             document.getElementById("dur").innerHTML = "ez"
             document.getElementById("neige").style.visibility = "hidden"
+            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>")
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "orange"
             document.getElementById("dur").innerHTML = "duuuur"
             document.getElementById("neige").style.visibility = "hidden"
+            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>")
+
         }
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 6, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "grey"
             document.getElementById("dur").innerHTML = "gnéééé?"
             document.getElementById("neige").style.visibility = "hidden"
+            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>")
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#c0392b"
             document.getElementById("dur").innerHTML = "R.I.P."
             document.getElementById("neige").style.visibility = "visible"
+            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + "beaucoup trop" + "<tr><th scope=row>Mathématiques<td>" + "beaucoup trop" + "<tr><th scope=row>SI<td>" + "beaucoup trop" + "<tr><th scope=row>TIPE<td>" + "beaucoup trop" + "<tr><th scope=row>Anglais<td>" + "beaucoup trop" + "<tr><th scope=row>Français<td>" + "beaucoup trop" + "<tr><th scope=row>Informatique<td>" + "beaucoup trop" + "<tr><th scope=row>Form. Culturelle<td>" + "beaucoup trop" + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + "beaucoup (beaucoup) trop" + "</table>")
         }
     }
 
