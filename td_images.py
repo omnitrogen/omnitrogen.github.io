@@ -1,7 +1,7 @@
 import imageio
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.widgets import Slider
+from matplotlib.widgets import Button
 from itertools import product
 
 im = imageio.imread("tete.jpg")
@@ -22,14 +22,36 @@ def grey_scale(image):
     return image
 
 def reduction(image):
-    """resize the image while only selecting one row out of p"""
+    """resize the image -> only select one row out of p"""
     test = plt.imshow(image)
-    plt.title("Reduction une ligne sur p")
-    axp = plt.axes([0.15, 0.025, 0.7, 0.025])
-    slider = Slider(axp, 'p', 1, image.shape[0], valinit=1)
-    def update(val):
-        test.set_data(image[::int(slider.val)])
-    slider.on_changed(update)
+    title = plt.title("Reduction une ligne sur p")
+
+    axMoins = plt.axes([0.12, 0.01, 0.1, 0.05])
+    axPlus = plt.axes([0.22, 0.01, 0.1, 0.05])
+
+    class Index(object):
+        p = 1
+
+        def plus(self, event):
+            self.p += 1
+            test.set_data(image[::int(self.p)])
+            title.set_text("p = {}".format(str(self.p)))
+            plt.draw()
+
+        def moins(self, event):
+            if self.p >= 2:
+                self.p -= 1
+            test.set_data(image[::int(self.p)])
+            title.set_text("p = {}".format(str(self.p)))
+            plt.draw()
+
+
+    callback = Index()
+    bnext = Button(axPlus, 'p += 1')
+    bnext.on_clicked(callback.plus)
+    bprev = Button(axMoins, 'p -= 1')
+    bprev.on_clicked(callback.moins)
+
     plt.show()
     pass
 
@@ -63,8 +85,14 @@ plt.title("Image initiale")
 plt.show()
 
 # entiers codant les couleurs R, V, B
-lr, lv, lb = decomp(im)
-#print(lr, lv, lb)
+lr, lv, lb = decomp(im.copy())
+#print(lr, lv, lb) # deconseille car bcp de valeurs
+plt.text(.01, .75, "Lr: {0}".format([lr[i] for i in range(10)] + [" ... "] + [lr[i] for i in range(lr.__len__() - 10, lr.__len__())]), clip_on=True, fontsize=8)
+plt.text(.01, .5, "Lv: {0}".format([lv[i] for i in range(10)] + [" ... "] + [lv[i] for i in range(lv.__len__() - 10, lv.__len__())]), clip_on=True, fontsize=8)
+plt.text(.01, .2, "Lb: {0}".format([lb[i] for i in range(10)] + [" ... "] + [lb[i] for i in range(lb.__len__() - 10, lb.__len__())]), clip_on=True, fontsize=8)
+plt.axis('off')
+plt.title("Listes Lr, Lv, Lb des entiers codant les couleurs R, V, B")
+plt.show()
 
 # image sans sa composante rouge
 withoutRed = delete_red_component(im.copy())
