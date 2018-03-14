@@ -1,10 +1,13 @@
-import imageio
+from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
 from itertools import product
 
-im = imageio.imread("tete2.jpg")
+#import imageio
+#im = imageio.imread("")
+
+im = np.asarray(Image.open(""))
 
 def delete_red_component(image):
     """return image without red component"""
@@ -78,70 +81,70 @@ def filtrage(image):
     return image
 
 
-# # image initiale
-# plt.imshow(im)
-# plt.xlabel((" ".join(["size: ", str(im.shape[0]), "x", str(im.shape[1]), "(format (y,x))"])))
-# plt.title("Image initiale")
-# plt.show()
+# image initiale
+plt.imshow(im)
+plt.xlabel((" ".join(["size: ", str(im.shape[0]), "x", str(im.shape[1]), "(format (y,x))"])))
+plt.title("Image initiale")
+plt.show()
 
-# # entiers codant les couleurs R, V, B
-# lr, lv, lb = decomp(im.copy())
-# #print(lr, lv, lb) # deconseille car bcp de valeurs
-# plt.text(.01, .75, "Lr: {0}".format([lr[i] for i in range(10)] + [" ... "] + [lr[i] for i in range(lr.__len__() - 10, lr.__len__())]), clip_on=True, fontsize=8)
-# plt.text(.01, .5, "Lv: {0}".format([lv[i] for i in range(10)] + [" ... "] + [lv[i] for i in range(lv.__len__() - 10, lv.__len__())]), clip_on=True, fontsize=8)
-# plt.text(.01, .2, "Lb: {0}".format([lb[i] for i in range(10)] + [" ... "] + [lb[i] for i in range(lb.__len__() - 10, lb.__len__())]), clip_on=True, fontsize=8)
-# plt.axis('off')
-# plt.title("Listes Lr, Lv, Lb des entiers codant les couleurs R, V, B")
-# plt.show()
+# entiers codant les couleurs R, V, B
+lr, lv, lb = decomp(im.copy())
+#print(lr, lv, lb) # deconseille car bcp de valeurs
+plt.text(.01, .75, "Lr: {0}".format([lr[i] for i in range(10)] + [" ... "] + [lr[i] for i in range(lr.__len__() - 10, lr.__len__())]), clip_on=True, fontsize=8)
+plt.text(.01, .5, "Lv: {0}".format([lv[i] for i in range(10)] + [" ... "] + [lv[i] for i in range(lv.__len__() - 10, lv.__len__())]), clip_on=True, fontsize=8)
+plt.text(.01, .2, "Lb: {0}".format([lb[i] for i in range(10)] + [" ... "] + [lb[i] for i in range(lb.__len__() - 10, lb.__len__())]), clip_on=True, fontsize=8)
+plt.axis('off')
+plt.title("Listes Lr, Lv, Lb des entiers codant les couleurs R, V, B")
+plt.show()
 
-# # image sans sa composante rouge
-# withoutRed = delete_red_component(im.copy())
-# plt.imshow(withoutRed)
-# plt.title("Image sans sa composante rouge")
-# plt.show()
+# image sans sa composante rouge
+withoutRed = delete_red_component(im.copy())
+plt.imshow(withoutRed)
+plt.title("Image sans sa composante rouge")
+plt.show()
 
-# # niveau de gris
-# grey = grey_scale(im.copy())
-# plt.imshow(grey)
-# plt.title("Niveau de gris")
-# plt.show()
+# niveau de gris
+grey = grey_scale(im.copy())
+plt.imshow(grey)
+plt.title("Niveau de gris")
+plt.show()
 
-# # selectionne une ligne sur p
-# reducted = reduction(im.copy())
+# selectionne une ligne sur p
+reducted = reduction(im.copy())
 
-# # reduit en ne prenant qu'une ligne sur p
-# plt.imshow(im.copy()[::3])
-# plt.show()
+# reduit en ne prenant qu'une ligne sur p
+plt.imshow(im.copy()[::3])
+plt.show()
 
-# # image retournee de 180 deg
-# rotated = rotate_90(im.copy(), 2)
-# plt.imshow(rotated)
-# plt.title("Image retournee de 180 deg")
-# plt.show()
+# image retournee de 180 deg
+rotated = rotate_90(im.copy(), 2)
+plt.imshow(rotated)
+plt.title("Image retournee de 180 deg")
+plt.show()
 
-# # tete de viole verticale
-# vertical = rotate_90(im.copy(), -1)
-# plt.imshow(vertical)
-# plt.title("Tete de viole verticale")
-# plt.show()
+# tete de viole verticale
+vertical = rotate_90(im.copy(), -1)
+plt.imshow(vertical)
+plt.title("Tete de viole verticale")
+plt.show()
 
-# # inverse les niveaux de gris
-# inverse = inverser(grey.copy())
-# plt.imshow(inverse)
-# plt.title("Inverse les niveaux de gris")
-# plt.show()
+# inverse les niveaux de gris
+inverse = inverser(grey.copy())
+plt.imshow(inverse)
+plt.title("Inverse les niveaux de gris")
+plt.show()
 
-# # rapprochement des extremes
-# extreme = rapproch_extreme(im.copy())
-# plt.imshow(extreme)
-# plt.title("Rapprochement des extremes")
-# plt.show()
+# rapprochement des extremes
+extreme = rapproch_extreme(im.copy())
+plt.imshow(extreme)
+plt.title("Rapprochement des extremes")
+plt.show()
 
-# # filtrage: remplace chaque pixel d’une image en nuances de gris par la moyenne des pixels qui lui sont voisins
-# filtre = filtrage(grey.copy())
-# plt.imshow(filtre)
-# plt.title("Filtre moyenne des pixels voisins (sorte de flou ou aplanissement)")
-# plt.xlabel("Flou pour les images petites et aplanissement pour les images plus grandes")
-# plt.show()
+# filtrage: remplace chaque pixel d’une image en nuances de gris par la moyenne des pixels qui lui sont voisins
+filtre = filtrage(grey.copy())
+plt.imshow(filtre)
+plt.title("Filtre moyenne des pixels voisins (sorte de flou ou aplanissement)")
+plt.xlabel("Flou pour les images petites et aplanissement pour les images plus grandes")
+plt.show()
 
 print("end")
