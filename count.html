@@ -162,17 +162,24 @@
         var hoursRemaining = 0;
         function logResults(json){
             dividedHours = json["dividedHours"]
+
             form = dividedHours["Form. Culturelle"]
             info = dividedHours["Informatique"]
             fran = dividedHours["Français"]
             angl = dividedHours["Anglais"]
             tipe = dividedHours["TIPE"]
-            si = dividedHours["SI"]
-            math = dividedHours["Mathématiques"]
-            phys = dividedHours["Physique"]
-            total = form + info + fran + angl + tipe + si + math + phys
+            siCo = dividedHours["SI - Cours"]
+            siTd = dividedHours["SI - TD"]
+            siTp = dividedHours["SI - TP"]
+            mathCo = dividedHours["Mathématiques - Cours"]
+            mathTd = dividedHours["Mathématiques - TD"]
+            physCo = dividedHours["Physique - Cours"]
+            physTd = dividedHours["Physique - TD"]
+            physTp = dividedHours["Physique - TP"]
+            autres = dividedHours["Autres"]
+            total = form + info + fran + angl + tipe + siCo + siTd + siTp + mathCo + mathTd + physCo + physTd + physTp + autres
 
-            var tableau = "<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>"
+            var tableau = "<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + physCo + " <tr> <th scope=row>Physique - TD <td>" + physTd + " <tr> <th scope=row>Physique - TP <td>" + physTp + " <tr> <th scope=row>Mathématiques - Cours <td>" + mathCo + " <tr> <th scope=row>Mathématiques - TD <td>" + mathTd + " <tr> <th scope=row>SI - Cours <td>" + siCo + " <tr> <th scope=row>SI - TD <td>" + siTd + " <tr> <th scope=row>SI - TP <td>" + siTp + " <tr> <th scope=row>Informatique <td>" + info + " <tr> <th scope=row>Anglais <td>" + angl + " <tr> <th scope=row>Français <td>" + fran + " <tr> <th scope=row>TIPE <td>" + tipe + " <tr> <th scope=row>Form. Culturelle <td>" + form + " <tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + total + "</table>"
 
             $("#demo").html(tableau)
         }
@@ -195,14 +202,14 @@
             document.getElementById("page").style.backgroundColor = "#2ecc71"
             document.getElementById("dur").innerHTML = "ez"
             document.getElementById("neige").style.visibility = "hidden"
-            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>")
+            $("#demo").html("<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + physCo + " <tr> <th scope=row>Physique - TD <td>" + physTd + " <tr> <th scope=row>Physique - TP <td>" + physTp + " <tr> <th scope=row>Mathématiques - Cours <td>" + mathCo + " <tr> <th scope=row>Mathématiques - TD <td>" + mathTd + " <tr> <th scope=row>SI - Cours <td>" + siCo + " <tr> <th scope=row>SI - TD <td>" + siTd + " <tr> <th scope=row>SI - TP <td>" + siTp + " <tr> <th scope=row>Informatique <td>" + info + " <tr> <th scope=row>Anglais <td>" + angl + " <tr> <th scope=row>Français <td>" + fran + " <tr> <th scope=row>TIPE <td>" + tipe + " <tr> <th scope=row>Form. Culturelle <td>" + form + " <tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + total + "</table>")
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == false) {
             countDownDate = new Date("Jun 30, 2018 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "orange"
             document.getElementById("dur").innerHTML = "duuuur"
             document.getElementById("neige").style.visibility = "hidden"
-            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + phys + "<tr><th scope=row>Mathématiques<td>" + math + "<tr><th scope=row>SI<td>" + si + "<tr><th scope=row>TIPE<td>" + tipe + "<tr><th scope=row>Anglais<td>" + angl + "<tr><th scope=row>Français<td>" + fran + "<tr><th scope=row>Informatique<td>" + info + "<tr><th scope=row>Form. Culturelle<td>" + form + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + total + "</table>")
+            $("#demo").html("<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + physCo + " <tr> <th scope=row>Physique - TD <td>" + physTd + " <tr> <th scope=row>Physique - TP <td>" + physTp + " <tr> <th scope=row>Mathématiques - Cours <td>" + mathCo + " <tr> <th scope=row>Mathématiques - TD <td>" + mathTd + " <tr> <th scope=row>SI - Cours <td>" + siCo + " <tr> <th scope=row>SI - TD <td>" + siTd + " <tr> <th scope=row>SI - TP <td>" + siTp + " <tr> <th scope=row>Informatique <td>" + info + " <tr> <th scope=row>Anglais <td>" + angl + " <tr> <th scope=row>Français <td>" + fran + " <tr> <th scope=row>TIPE <td>" + tipe + " <tr> <th scope=row>Form. Culturelle <td>" + form + " <tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + total + "</table>")
 
         }
         if (document.getElementById("check_rat").checked == false && document.getElementById("check_red").checked == true) {
@@ -210,14 +217,14 @@
             document.getElementById("page").style.backgroundColor = "grey"
             document.getElementById("dur").innerHTML = "gnéééé?"
             document.getElementById("neige").style.visibility = "hidden"
-            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>Mathématiques<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>SI<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>TIPE<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>Anglais<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>Français<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>Informatique<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr><th scope=row>Form. Culturelle<td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + "404" + "</table>")
+            $("#demo").html("<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Physique - TD <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Physique - TP <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Mathématiques - Cours <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Mathématiques - TD <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>SI - Cours <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>SI - TD <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>SI - TP <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Informatique <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Anglais <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Français <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>TIPE <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + " <tr> <th scope=row>Form. Culturelle <td>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<i class=\"fa fa-question\"></i>" + "<tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + "404" + "</table>")
         }
         if (document.getElementById("check_rat").checked == true && document.getElementById("check_red").checked == true) {
             countDownDate = new Date("Jun 30, 2019 20:00:00").getTime();
             document.getElementById("page").style.backgroundColor = "#c0392b"
             document.getElementById("dur").innerHTML = "R.I.P."
             document.getElementById("neige").style.visibility = "visible"
-            $("#demo").html("<table class=\"table table-sm\"><thead><tr><th scope=col>Matière<th scope=col class=text-center>Nombre d'heures restantes<tbody><tr><th scope=row>Physique<td>" + "beaucoup" + "<tr><th scope=row>Mathématiques<td>" + "beaucoup" + "<tr><th scope=row>SI<td>" + "beaucoup" + "<tr><th scope=row>TIPE<td>" + "beaucoup" + "<tr><th scope=row>Anglais<td>" + "beaucoup" + "<tr><th scope=row>Français<td>" + "beaucoup" + "<tr><th scope=row>Informatique<td>" + "beaucoup" + "<tr><th scope=row>Form. Culturelle<td>" + "beaucoup" + "<tr style=\"font-size: 30px\"><th scope=row>Total<td>" + "beaucoup trop" + "</table>")
+            $("#demo").html("<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + "beaucoup" + " <tr> <th scope=row>Physique - TD <td>" + "beaucoup" + " <tr> <th scope=row>Physique - TP <td>" + "beaucoup" + " <tr> <th scope=row>Mathématiques - Cours <td>" + "beaucoup" + " <tr> <th scope=row>Mathématiques - TD <td>" + "beaucoup" + " <tr> <th scope=row>SI - Cours <td>" + "beaucoup" + " <tr> <th scope=row>SI - TD <td>" + "beaucoup" + " <tr> <th scope=row>SI - TP <td>" + "beaucoup" + " <tr> <th scope=row>Informatique <td>" + "beaucoup" + " <tr> <th scope=row>Anglais <td>" + "beaucoup" + " <tr> <th scope=row>Français <td>" + "beaucoup" + " <tr> <th scope=row>TIPE <td>" + "beaucoup" + " <tr> <th scope=row>Form. Culturelle <td>" + "beaucoup" + " <tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + "beaucoup trop" + "</table>")
         }
     }
 
