@@ -1,26 +1,24 @@
-## L'abime se repeuple
+# L'abime se repeuple
 
-«Parler du monde actuel comme d’un cadavre en décomposition n’est pas simple facilité rhétorique, c’est une image, mais de celles qui servent à imaginer juste».
+## Extrait (parabole de la maison):
 
-Première phrase d’une analyse radicale du monde par Jaime Semprun, ayant fait partie de la mouvance situationniste mais aussi grand défenseur et explicateur de l’oeuvre de Georges Orwell.
+```
+Que penserait-on en effet de quelqu’un qui dirait : "Monsieur Untel
+s’était construit une maison de deux étages, une demeure spacieuse pour lui et sa famille. Mais il ne s’est pas contenté de deux étages, il en a construit encore quarante, ou quatre cents, ou quatre mille, et il ne compte pas du tout s’arrêter là. Que trouvez-vous à redire ? Il a procuré un abri aux siens, _il continue_."
+La tour insensé de monsieur Untel est condamnée à s’écrouler d’un instant à l’autre sur ses habitants, chaque nouvel étage ajoute à la menace, mais on en parle toujours comme d’un _abri_.
+Tel est bien le discours des apologistes du développement technique infini, avec cette circonstance aggravante qu’ils le tiennent devant un tas de décombres : la maison devenue tour insensée _s’est déjà écroulée_.
+Et tout ce qu’il y avait de ténébreux dans cet abri, les réalités obscures sur lesquelles étaient fondés les identifications collectives et le chantage social, les peurs, les répressions et les cruautés, toute la part de barbarie enfouie sous l’édifice de la civilisation, tout cela est remonté des caves et des fondations, et vient maintenant à l’air libre.
+```
 
-Le titre rappelle le titre de livres de Jack London « Les gens d’en-bas ou le peuple de l’abîme» mais aussi «Le talon de fer» décrivant les conditions de vie des pauvres de Londres à l’aube du XXème siècle.
+---
 
-D’après Jaime Semprun la situation aurait empiré à l’aube du XXIème siècle.
+* __Parabole__ -> la maison représente notre _société_ et l'augmentation du nombre d'étages le _développement technique_.
+* ```il ne s’est pas contenté de deux étages``` -> représentation de notre société pronant le progrès pour le progrès
+* ```il en a construit encore quarante, ou quatre cents, ou quatre mille, et il ne compte pas du tout s’arrêter là``` -> modèle "Après nous le déluge" -> critique notre monde soumis, sans échapatoire, ```condamné```
+* ```chaque nouvel étage ajoute à la menace, mais on en parle toujours comme d’un abri``` -> la société refuse de voir l'évidence, aveuglée par ce développement paraissant infini...
+* ```Tel est bien le discours des apologistes du développement technique infini, avec cette circonstance aggravante qu’ils le tiennent devant un tas de décombres``` -> folie
+* ```la maison devenue tour insensée s’est déjà écroulée```
 
-Il décrit le monde (en 1997) comme soumis , sans échappatoire , à l’exploitation économique, à l’abolition de l’histoire, donc délivré de tout devoir vis-à-vis du passé. Que tous les perfectionnements techniques ont si bien simplifié notre vie qu’il ne reste presque plus rien de vivant. Que la barbarie jaillit de cette vie simplifiée, mécanisée, sans esprit!
+* ne se demande pas quel monde nous allons laisser à nos enfants mais plutôt quels enfants nous allons laisser au monde
 
-Tout y passe, l’éducation : «adolescence sans fin et sans finalité», favorisée par l’orthodoxie juvéniliste, les marchands, les parents, même les ex-gauchistes.
-L’automobile et ses «déserts carrossables», la musique de masse, les fêtes vides de sens, la désintégration de la cellule familiale, soit le modèle de « APRES NOUS LE DELUGE».
-Il fait également référence à l’industrie du spectacle (comme G.Debord) et le rejet «aux confins de la société de grandes masses de populations qu’on laisse littéralement pourrir dans le dénuement matériel et psychologique».
-
-J’ai été impressionné par l’extrait de «Fusées « de Charles Baudelaire, cité à propos des risques de la domination marchande et de l’individualisme : «Ai-je besoin de dire que le peu qui restera de politique se débattra péniblement dans les étreintes de l’animalité générale et que les gouvernants seront forcés, pour se maintenir et pour créer un fantôme d’ordre, de recourir à des moyens qui feraient frissonner notre humanité actuelle, pourtant si endurcie».
-
-Le résultat serait la création d’une NOVHOMME, via l’individualisme, l’hédonisme, la vitalité opportuniste , l’intensité vide du «jeu et de la fête».
-«Aux dernières nouvelles, un éventuel CLONAGE des humains menacerait de transformer nos sociétés en termitières totalitaires»!!!
-
-Elucubrations! Délires!Je ne sais pas, mais l’argumentation est claire et efficace sinon séduisante. En tout cas impressionnante dans sa radicalité.
-
-Jaime Semprun, (décédé en 201O), n’aborde pas les problèmes écologiques ou spécifiquement financiers que nous avons le déplaisir de découvrir depuis.
-
-Alors que faire de cette avalanche de mauvaises nouvelles, sinon faire de la résistance, garder le contact avec les réalités accessibles, rechercher la diversité des points de vue , prendre du recul et tenter de garder la tête froide?
+---
