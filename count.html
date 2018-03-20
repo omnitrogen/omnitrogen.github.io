@@ -160,6 +160,21 @@
 
     <script>
         var hoursRemaining = 0;
+
+        function floatToHour(num) {
+          var min = 1 / 60;
+          var intpart = Math.floor(num);
+          var decpart = num - intpart;
+          decpart = min * Math.round(decpart / min);
+          var minutes = Math.floor(decpart * 60);
+          // return sign + intpart + 'h' + pad(minutes, 2);
+          if (minutes == 0) {
+            return intpart + ' h ';
+          }
+          else {
+            return intpart + ' h ' + minutes;
+          }
+        }
         function logResults(json){
             dividedHours = json["dividedHours"]
 
@@ -177,7 +192,21 @@
             physTd = dividedHours["Physique - TD"]
             physTp = dividedHours["Physique - TP"]
             autres = dividedHours["Autres"]
-            total = form + info + fran + angl + tipe + siCo + siTd + siTp + mathCo + mathTd + physCo + physTd + physTp + autres
+            total = floatToHour(form + info + fran + angl + tipe + siCo + siTd + siTp + mathCo + mathTd + physCo + physTd + physTp + autres)
+
+            form = floatToHour(dividedHours["Form. Culturelle"])
+            info = floatToHour(dividedHours["Informatique"])
+            fran = floatToHour(dividedHours["Français"])
+            angl = floatToHour(dividedHours["Anglais"])
+            tipe = floatToHour(dividedHours["TIPE"])
+            siCo = floatToHour(dividedHours["SI - Cours"])
+            siTd = floatToHour(dividedHours["SI - TD"])
+            siTp = floatToHour(dividedHours["SI - TP"])
+            mathCo = floatToHour(dividedHours["Mathématiques - Cours"])
+            mathTd = floatToHour(dividedHours["Mathématiques - TD"])
+            physCo = floatToHour(dividedHours["Physique - Cours"])
+            physTd = floatToHour(dividedHours["Physique - TD"])
+            physTp = floatToHour(dividedHours["Physique - TP"])
 
             var tableau = "<table class=\"table table-sm\"> <thead> <tr> <th scope=col>Matière <th scope=col class=text-center>Nombre d'heures restantes <tbody> <tr> <th scope=row>Physique - Cours <td>" + physCo + " <tr> <th scope=row>Physique - TD <td>" + physTd + " <tr> <th scope=row>Physique - TP <td>" + physTp + " <tr> <th scope=row>Mathématiques - Cours <td>" + mathCo + " <tr> <th scope=row>Mathématiques - TD <td>" + mathTd + " <tr> <th scope=row>SI - Cours <td>" + siCo + " <tr> <th scope=row>SI - TD <td>" + siTd + " <tr> <th scope=row>SI - TP <td>" + siTp + " <tr> <th scope=row>Informatique <td>" + info + " <tr> <th scope=row>Anglais <td>" + angl + " <tr> <th scope=row>Français <td>" + fran + " <tr> <th scope=row>TIPE <td>" + tipe + " <tr> <th scope=row>Form. Culturelle <td>" + form + " <tr style=\"font-size: 30px\"> <th scope=row>Total <td>" + total + "</table>"
 
