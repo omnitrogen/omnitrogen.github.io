@@ -3,51 +3,44 @@ import numpy as np
 import scipy as sp
 import matplotlib.pyplot as plt
 
-#cree_liste = lambda x: [0 for i in range(x)]
-#porte = lambda x: 1 if -0.5 < x < 0.5 else 0
-#portes = lambda x: 1 if -0.5 < x < 0.5 else (0.8 if 0.7 < x < 1.7 else 0)
+# np.zeros(N,dtype=complex)
 
-n = 4
+def f():
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
 
-# definition de a
-a = np.zeros(n)
-a[2] = 1
+    a = np.zeros(5)
+    a[2] = 1
 
-plt.subplot(311)
-plt.plot( np.append(a, a[0]) )
+    ax.plot([i for i in range(-2, 3)], a)
 
-A = np.fft.fft(a)
-B = np.append(A, A[0])
+    #ax.plot([i for i in range(-2, 3)], [0, 0, 1, 0, 0])
+    ax.spines['left'].set_position('center')
+    ax.spines['right'].set_color('none')
+    ax.spines['top'].set_color('none')
+    plt.show()
+    pass
 
-plt.subplot(312)
-plt.plot(np.real(B))
-plt.ylabel("partie reelle")
+f()
 
-plt.subplot(313)
-plt.plot(np.imag(B))
-plt.ylabel("partie imaginaire")
+def g():
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
 
-plt.show()
+    a = np.zeros(9)
+    a[2] = 1
+    a[3] = 2
+    a[4] = 1
+    a[5] = 1
+    a[6] = 1
 
-a = np.zeros(8)
-a[2] = 1
-a[3] = 2
-a[4] = 1
-a[5] = 1
-a[6] = 1
+    ax.plot([i for i in range(-3, 6)], a)
 
-plt.subplot(311)
-plt.plot( np.append(a, a[0]) )
+    #ax.plot([i for i in range(-3, 6)], [0, 0, 1, 2, 1, 1, 1, 0, 0])
+    ax.spines['left'].set_position(('data', 0))
+    ax.spines['right'].set_color('none')
+    ax.spines['top'].set_color('none')
+    plt.show()
+    pass
 
-A = np.fft.fft(a)
-B = np.append(A, A[0])
-
-plt.subplot(312)
-plt.plot(np.real(B))
-plt.ylabel("partie reelle")
-
-plt.subplot(313)
-plt.plot(np.imag(B))
-plt.ylabel("partie imaginaire")
-
-plt.show()
+g()
