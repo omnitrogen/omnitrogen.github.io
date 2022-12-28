@@ -6,8 +6,7 @@ const config = {
 		adapter: adapter({
 			pages: 'docs',
 			assets: 'docs'
-		}),
-		appDir: 'internal'
+		})
 	}
 };
 

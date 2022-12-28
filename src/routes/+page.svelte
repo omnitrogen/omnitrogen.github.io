@@ -72,7 +72,7 @@
 
 	<hr />
 
-	<span>If you wish to contact me, tou can reach me there: </span>
+	<span>If you wish to contact me, you can reach me there: </span>
 
 	<ul>
 		<li>felixgif at gmail dot com</li>
