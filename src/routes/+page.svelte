@@ -10,7 +10,7 @@
 
 	<h4>hello world!</h4>
 
-	<p>I am Félix Defrance, a software engineer from 🇫🇷</p>
+	<p>I am Félix, a software engineer from France.</p>
 
 	<hr />
 
@@ -76,19 +76,13 @@
 
 	<ul>
 		<li>felixgif at gmail dot com</li>
-		<li><a href="https://twitter.com/omnitrogen" target="_blank" rel="noopener noreferrer">twitter</a></li>
-		<li>
-			<a href="https://www.linkedin.com/in/f%C3%A9lix-defrance-b84aaab6/" target="_blank" rel="noopener noreferrer"
-				>linkedin</a
-			>
-		</li>
 	</ul>
 
 	<hr />
 
 	<span><i>Fun</i> facts:</span>
 	<ul>
-		<li>I really love rice 🍚</li>
+		<li>I really love rice</li>
 		<li>someday, I want to live in a tiny house deep in the french Alps</li>
 		<li>
 			I am an
@@ -99,10 +93,10 @@
 	<hr />
 
 	<blockquote>
-		"All that is gold does not glitter,<br />
+		All that is gold does not glitter,<br />
 		Not all those who wander are lost;<br />
 		The old that is strong does not wither,<br />
-		Deep roots are not reached by the frost."
+		Deep roots are not reached by the frost.
 		<footer>
 			<cite>- J.R.R. Tolkien, The Fellowship of the Ring</cite>
 		</footer>
