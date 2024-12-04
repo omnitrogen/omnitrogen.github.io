@@ -1,18 +1,16 @@
-<script>
-	import '@picocss/pico';
-	import './styles.css';
-	import Header from '../components/Header.svelte';
-	import Footer from '../components/Footer.svelte';
+<script lang="ts">
+	import { i18n } from '$lib/i18n';
+	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
+	import '@picocss/pico/css/pico.amber.min.css';
+	import Footer from '$lib/components/Footer.svelte';
+
+	let { children } = $props();
 </script>
 
-<div class="app">
+<ParaglideJS {i18n}>
 	<main class="container">
-		<Header />
-
-		<body>
-			<slot />
-		</body>
+		{@render children()}
 
 		<Footer />
 	</main>
-</div>
+</ParaglideJS>

@@ -17,8 +17,9 @@
 	<p>I like to create softwares that are sustainable, accessible, useful, fast and lightweight.</p>
 
 	<p>
-		I currently work at the <b>French National Museum of Natural History</b> (MNHN) where I am in charge of redesigning
-		a <i>citizen science</i> mobile app that allow french citizens to participate in the french biodiversity inventory.
+		I currently work at the <b>French National Museum of Natural History</b> (MNHN) where I am in
+		charge of redesigning a <i>citizen science</i> mobile app that allow french citizens to participate
+		in the french biodiversity inventory.
 	</p>
 
 	<hr />
@@ -31,17 +32,36 @@
 			<ul>
 				<li>
 					frontend with
-					<code><a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer">sveltekit</a></code>
+					<code
+						><a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer"
+							>sveltekit</a
+						></code
+					>
 				</li>
 				<li>
 					backend either
-					<code><a href="https://github.com/tokio-rs/axum" target="_blank" rel="noopener noreferrer">axum</a></code>
+					<code
+						><a href="https://github.com/tokio-rs/axum" target="_blank" rel="noopener noreferrer"
+							>axum</a
+						></code
+					>
 					(rust) with
-					<code><a href="https://github.com/launchbadge/sqlx" target="_blank" rel="noopener noreferrer">sqlx</a></code>
+					<code
+						><a href="https://github.com/launchbadge/sqlx" target="_blank" rel="noopener noreferrer"
+							>sqlx</a
+						></code
+					>
 					and a custom
-					<code><a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer">postgres</a></code>
+					<code
+						><a href="https://www.postgresql.org/" target="_blank" rel="noopener noreferrer"
+							>postgres</a
+						></code
+					>
 					db, or a solution like
-					<code><a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">supabase</a></code>
+					<code
+						><a href="https://supabase.com/" target="_blank" rel="noopener noreferrer">supabase</a
+						></code
+					>
 				</li>
 			</ul>
 		</li>
@@ -49,11 +69,18 @@
 			for native mobile app
 			<ul>
 				<li>
-					<code><a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">flutter</a></code>
+					<code
+						><a href="https://flutter.dev/" target="_blank" rel="noopener noreferrer">flutter</a
+						></code
+					>
 					with
-					<code><a href="https://riverpod.dev/" target="_blank" rel="noopener noreferrer">riverpod</a></code>
+					<code
+						><a href="https://riverpod.dev/" target="_blank" rel="noopener noreferrer">riverpod</a
+						></code
+					>
 					and
-					<code><a href="https://isar.dev/" target="_blank" rel="noopener noreferrer">isar</a></code>
+					<code><a href="https://isar.dev/" target="_blank" rel="noopener noreferrer">isar</a></code
+					>
 				</li>
 			</ul>
 		</li>
@@ -62,12 +89,13 @@
 	<hr />
 
 	<p>
-		Besides programming, I enjoy spending time outdoors running all kind of trails, cycling long distances, skiing up
-		and down mountains and growing our family vegetable garden.
+		Besides programming, I enjoy spending time outdoors running all kind of trails, cycling long
+		distances, skiing up and down mountains and growing our family vegetable garden.
 	</p>
 
 	<p>
-		I am quite terrified by the climate crisis, I care about social justice and I am fascinated by sustainable mobility.
+		I am quite terrified by the climate crisis, I care about social justice and I am fascinated by
+		sustainable mobility.
 	</p>
 
 	<hr />
@@ -86,7 +114,11 @@
 		<li>someday, I want to live in a tiny house deep in the french Alps</li>
 		<li>
 			I am an
-			<a href="https://www.16personalities.com/infp-personality" target="_blank" rel="noopener noreferrer">INFP</a>
+			<a
+				href="https://www.16personalities.com/infp-personality"
+				target="_blank"
+				rel="noopener noreferrer">INFP</a
+			>
 		</li>
 	</ul>
 
@@ -114,5 +146,6 @@
 	.centered {
 		text-align: center;
 		margin-bottom: 1rem;
+		margin-top: 1rem;
 	}
 </style>
