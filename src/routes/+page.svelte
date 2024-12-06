@@ -4,10 +4,6 @@
 </svelte:head>
 
 <section>
-	<section class="centered">
-		<img src="/images/profile.webp" alt="félix defrance profile" />
-	</section>
-
 	<h4>hello world!</h4>
 
 	<p>I am Félix, a software engineer from France.</p>
@@ -134,18 +130,3 @@
 		</footer>
 	</blockquote>
 </section>
-
-<style>
-	img {
-		border-radius: 4rem;
-		width: 10vh;
-		height: 10vh;
-		object-fit: cover;
-	}
-
-	.centered {
-		text-align: center;
-		margin-bottom: 1rem;
-		margin-top: 1rem;
-	}
-</style>

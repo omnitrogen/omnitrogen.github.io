@@ -1,22 +1,20 @@
-<section>
-	<footer>
-		<span>built with ❤️ by omnitrogen</span>
-		<br />
+<script lang="ts">
+	import * as m from '$lib/paraglide/messages.js';
+
+	import CodeXml from 'lucide-svelte/icons/code-xml';
+</script>
+
+<footer>
+	<section>
 		<small>
-			powered by
-			<code
-				><a href="https://svelte.dev/" target="_blank" rel="noopener noreferrer">sveltekit</a></code
-			>
-			and
-			<code
-				><a href="https://picocss.com/" target="_blank" rel="noopener noreferrer">pico.css</a></code
-			>
+			<span><CodeXml size={24} /> {m.footerWith()} ❤️ {m.footerBy()}</span>
 		</small>
-	</footer>
-</section>
+	</section>
+</footer>
 
 <style>
 	footer {
 		text-align: center;
+		margin-bottom: 2rem;
 	}
 </style>

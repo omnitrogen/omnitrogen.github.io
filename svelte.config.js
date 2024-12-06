@@ -8,7 +8,10 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'build'
-		})
+		}),
+		alias: {
+			$content: './src/lib/content'
+		}
 	}
 };
 

@@ -1,4 +1,8 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"resume": "resume",
+	"projects": "projects",
+
+	"footerWith": "with",
+	"footerBy": "by felixonwheels"
 }
