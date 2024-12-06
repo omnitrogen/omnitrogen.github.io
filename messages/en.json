@@ -3,6 +3,9 @@
 	"resume": "resume",
 	"projects": "projects",
 
+	"education": "Education",
+	"work": "Work experience",
+
 	"footerWith": "with",
 	"footerBy": "by felixonwheels"
 }

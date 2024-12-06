@@ -9,20 +9,19 @@
 	import Shapes from 'lucide-svelte/icons/shapes';
 </script>
 
-<header>
+<header class="container-fluid">
 	<nav>
 		<ul>
 			<li>
-				<a role="button" class="contrast" href="/"><strong>felixonwheels</strong></a>
+				<a href="/"><strong>felixonwheels</strong></a>
 			</li>
 		</ul>
 		<ul>
 			<li>
-				<a role="button" href="/resume"><strong><GraduationCap size={32} /> {m.resume()}</strong></a
-				>
+				<a href="/resume"><strong><GraduationCap size={32} /> {m.resume()}</strong></a>
 			</li>
 			<li>
-				<a role="button" href="/projects"><strong><Shapes size={32} /> {m.projects()}</strong></a>
+				<a href="/projects"><strong><Shapes size={32} /> {m.projects()}</strong></a>
 			</li>
 			<li>
 				<a
@@ -41,7 +40,7 @@
 
 <style>
 	header {
-		margin: 1rem 0;
+		margin: 1rem 0 2rem;
 	}
 
 	nav {
@@ -52,8 +51,14 @@
 	@media (width <= 576px) {
 		nav {
 			flex-direction: column;
-			align-items: center;
+		}
+
+		ul:nth-child(1) {
 			justify-content: center;
+		}
+
+		ul:nth-child(2) {
+			justify-content: space-around;
 		}
 	}
 </style>

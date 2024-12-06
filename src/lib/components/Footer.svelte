@@ -4,7 +4,7 @@
 	import CodeXml from 'lucide-svelte/icons/code-xml';
 </script>
 
-<footer>
+<footer class="container-fluid">
 	<section>
 		<small>
 			<span><CodeXml size={24} /> {m.footerWith()} ❤️ {m.footerBy()}</span>

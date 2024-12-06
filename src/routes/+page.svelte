@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>félix defrance</title>
+	<title>felixonwheels</title>
 	<meta name="description" content="homepage" />
 </svelte:head>
 

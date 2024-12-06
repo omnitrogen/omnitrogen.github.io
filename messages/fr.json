@@ -3,6 +3,9 @@
 	"resume": "cv",
 	"projects": "projets",
 
+	"education": "Formation",
+	"work": "Expériences professionnelles",
+
 	"footerWith": "avec",
 	"footerBy": "par felixonwheels"
 }
