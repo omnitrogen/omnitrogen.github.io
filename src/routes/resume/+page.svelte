@@ -6,6 +6,16 @@
 	import MoveRight from 'lucide-svelte/icons/move-right';
 	import Dot from 'lucide-svelte/icons/dot';
 	import ListCollapse from 'lucide-svelte/icons/list-collapse';
+
+	const imageModules = import.meta.glob(
+		'$lib/assets/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
+		{
+			eager: true,
+			query: {
+				enhanced: true
+			}
+		}
+	);
 </script>
 
 <section>
@@ -45,7 +55,14 @@
 	{#each resume.languages[languageTag()].education as edu}
 		<article>
 			<hgroup>
-				<h4>{edu.name} {edu.nameExplanation !== null ? `(${edu.nameExplanation})` : ''}</h4>
+				<div style="display: flex; flex-direction: row;">
+					<img
+						src={Object.entries(imageModules).find((elt) => elt[0].includes(edu.logo))?.[1].default}
+						alt=""
+						style="width: 10rem;"
+					/>
+					<h4>{edu.name} {edu.nameExplanation !== null ? `(${edu.nameExplanation})` : ''}</h4>
+				</div>
 				<br />
 				<h5><mark>{edu.title}</mark></h5>
 				<br />

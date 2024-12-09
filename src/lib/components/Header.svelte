@@ -40,7 +40,8 @@
 
 <style>
 	header {
-		margin: 1rem 0 2rem;
+		/* margin: 0 1rem 2rem; */
+		margin-bottom: 1rem;
 	}
 
 	nav {
@@ -49,6 +50,10 @@
 	}
 
 	@media (width <= 576px) {
+		header {
+			margin: 0 0 2rem;
+		}
+
 		nav {
 			flex-direction: column;
 		}

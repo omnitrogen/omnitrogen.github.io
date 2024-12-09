@@ -8,6 +8,7 @@ export const resume = {
 					startDate: 'Août 2020',
 					endDate: 'Janvier 2021',
 					title: 'Semestre d’échange académique',
+					logo: 'chalmers.webp',
 					description: [
 						{
 							mark: 'Réseaux de neurones artificiels',
@@ -33,6 +34,7 @@ export const resume = {
 					startDate: '2018',
 					endDate: '2021',
 					title: 'Cycle ingénieur spécialisation Logiciel',
+					logo: 'isep.webp',
 					description: [
 						{
 							mark: '3ème année',
@@ -50,6 +52,7 @@ export const resume = {
 					startDate: '2016',
 					endDate: '2018',
 					title: 'Cycle préparatoire associé MPSI puis PSI',
+					logo: 'isep.webp',
 					description: [
 						{
 							mark: 'Projet Personnel 1',
@@ -68,6 +71,7 @@ export const resume = {
 					endDate: '2016',
 					title:
 						'Baccalauréat Scientifique (spécialité Mathématiques, Classe européenne, Mention Bien)',
+					logo: 'lvc.webp',
 					description: null
 				}
 			],
@@ -102,6 +106,7 @@ export const resume = {
 					endDate: '2016',
 					title:
 						'Baccalauréat Scientifique (spécialité Mathématiques, Classe européenne, Mention Bien)',
+					logo: 'lvc.webp',
 					description: null
 				}
 			],
