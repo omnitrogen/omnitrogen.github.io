@@ -1,10 +1,13 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"resume": "resume",
-	"projects": "projects",
+	"about": "About",
+	"resume": "Resume",
+	"projects": "Projects",
 
 	"education": "Education",
 	"work": "Work experience",
+
+	"homeTitle": "Software engineer",
 
 	"footerWith": "with",
 	"footerBy": "by felixonwheels"
