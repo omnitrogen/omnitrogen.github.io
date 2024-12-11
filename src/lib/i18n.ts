@@ -11,6 +11,10 @@ export const i18n = createI18n(runtime, {
 		'/projects': {
 			fr: '/projets',
 			en: '/projects'
+		},
+		'/about': {
+			fr: '/à-propos',
+			en: '/about'
 		}
 	},
 	prefixDefaultLanguage: 'always',

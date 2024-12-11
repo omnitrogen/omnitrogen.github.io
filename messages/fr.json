@@ -1,10 +1,13 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"resume": "cv",
-	"projects": "projets",
+	"about": "À propos",
+	"resume": "CV",
+	"projects": "Projets",
 
 	"education": "Formation",
 	"work": "Expériences professionnelles",
+
+	"homeTitle": "Ingénieur logiciel",
 
 	"footerWith": "avec",
 	"footerBy": "par felixonwheels"
