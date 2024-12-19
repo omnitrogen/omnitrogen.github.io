@@ -9,16 +9,6 @@
 	import MoveRight from 'lucide-svelte/icons/move-right';
 	import Dot from 'lucide-svelte/icons/dot';
 	import ListCollapse from 'lucide-svelte/icons/list-collapse';
-
-	const imageModules = import.meta.glob(
-		'$lib/assets/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp,svg}',
-		{
-			eager: true,
-			query: {
-				enhanced: true
-			}
-		}
-	);
 </script>
 
 <svelte:head>
@@ -91,6 +81,8 @@
 						<h5><mark>{work.title}</mark></h5>
 						<br />
 						<small><kbd>{work.date}</kbd></small>
+						<br />
+						<img src={work.logo} alt={work.name} class="w-48 object-contain" />
 					</hgroup>
 
 					{#if work.description?.length}
@@ -98,7 +90,7 @@
 							<summary><ListCollapse /></summary>
 							<blockquote>
 								{#each work.description as item}
-									<small><b>{item.mark}</b> <Dot /> {item.text}</small><br />
+									<small><b>{item.title}</b> <Dot /> {item.text}</small><br />
 								{/each}
 							</blockquote>
 						</details>
@@ -117,12 +109,6 @@
 				<article>
 					<hgroup>
 						<div style="display: flex; flex-direction: row;">
-							<img
-								src={Object.entries(imageModules).find((elt) => elt[0].includes(edu.logo))?.[1]
-									.default}
-								alt=""
-								style="width: 10rem;"
-							/>
 							<h4>{edu.name} {edu.nameExplanation !== null ? `(${edu.nameExplanation})` : ''}</h4>
 						</div>
 						<br />
@@ -136,7 +122,7 @@
 							<summary><ListCollapse /></summary>
 							<blockquote>
 								{#each edu.description as item}
-									<small><b>{item.mark}</b> <Dot /> {item.text}</small><br />
+									<small><b>{item.title}</b> <Dot /> {item.text}</small><br />
 								{/each}
 							</blockquote>
 						</details>

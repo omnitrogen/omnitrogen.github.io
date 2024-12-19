@@ -13,7 +13,7 @@
 	<BlurFade once={true}>
 		<div>
 			<Separator
-				class="mx-auto mb-4 h-0.5 w-3/4 rounded-full bg-zinc-900/5 md:mb-8 dark:bg-white/10"
+				class="mx-auto mb-4 h-0.5 w-3/4 rounded-full bg-zinc-900/5 md:mb-8 md:w-1/3 dark:bg-white/10"
 			/>
 		</div>
 		<div class="flex flex-col items-center justify-between gap-6">

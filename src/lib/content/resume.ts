@@ -1,13 +1,35 @@
+import chalmers from '$lib/assets/images/chalmers.webp';
+import hello_watt from '$lib/assets/images/hello-watt.png';
+import irt_systemx from '$lib/assets/images/irt-systemx.png';
+import isep from '$lib/assets/images/isep.webp';
+import lvc from '$lib/assets/images/lvc.webp';
+import mnhn from '$lib/assets/images/mnhn.png';
+import partoo from '$lib/assets/images/partoo.png';
+
 export const resume = {
 	languages: {
 		fr: {
 			work: [
 				{
+					name: 'MNHN',
+					nameExplanation: "Muséum national d'Histoire naturelle",
+					date: '2022 - 2025 (3 ans)',
+					title: 'Développeur mobile',
+					logo: mnhn,
+					description: [
+						{
+							title: null,
+							text: 'INPN Espèces...'
+						}
+					],
+					stack: ['Flutter']
+				},
+				{
 					name: 'IRT SystemX',
 					nameExplanation: 'Accélérateur de la transformation numérique des territoires',
 					date: '2021 (6 mois)',
 					title: 'Stage data science et web full-stack',
-					logo: 'irt-systemx.png',
+					logo: irt_systemx,
 					description: [
 						{
 							title: null,
@@ -34,7 +56,7 @@ export const resume = {
 					nameExplanation: 'Conseiller énergie du particulier',
 					date: '2019 (6 mois)',
 					title: 'Stage R&D développeur full-stack',
-					logo: 'hello-watt.png',
+					logo: hello_watt,
 					description: [
 						{
 							title: null,
@@ -57,7 +79,7 @@ export const resume = {
 					nameExplanation: null,
 					date: 'Depuis 2017',
 					title: 'Membre de l’équipe de hackathon de l’ISEP',
-					logo: null,
+					logo: isep,
 					description: [
 						{
 							title: null,
@@ -75,7 +97,7 @@ export const resume = {
 					nameExplanation: 'Amélioration de la visibilité sur internet',
 					date: '2017 (1 mois)',
 					title: 'Stage R&D',
-					logo: 'partoo.png',
+					logo: partoo,
 					description: [
 						{
 							title: null,
@@ -92,7 +114,7 @@ export const resume = {
 					startDate: 'Août 2020',
 					endDate: 'Janvier 2021',
 					title: 'Semestre d’échange académique',
-					logo: 'chalmers.webp',
+					logo: chalmers,
 					description: [
 						{
 							title: 'Réseaux de neurones artificiels',
@@ -118,7 +140,7 @@ export const resume = {
 					startDate: '2018',
 					endDate: '2021',
 					title: 'Cycle ingénieur spécialisation Logiciel',
-					logo: 'isep.webp',
+					logo: isep,
 					description: [
 						{
 							title: '3ème année',
@@ -155,7 +177,7 @@ export const resume = {
 					endDate: '2016',
 					title:
 						'Baccalauréat Scientifique (spécialité Mathématiques, Classe européenne, Mention Bien)',
-					logo: 'lvc.webp',
+					logo: lvc,
 					description: null
 				}
 			]
@@ -167,6 +189,7 @@ export const resume = {
 					nameExplanation: 'Göteborg, Suède',
 					date: 'Août 2020',
 					title: 'Semestre d’échange académique',
+					logo: chalmers,
 					description: [
 						{
 							title: 'Réseaux de neurones artificiels',
@@ -190,12 +213,10 @@ export const resume = {
 					endDate: '2016',
 					title:
 						'Baccalauréat Scientifique (spécialité Mathématiques, Classe européenne, Mention Bien)',
-					logo: 'lvc.webp',
+					logo: lvc,
 					description: null
 				}
 			]
 		}
 	}
 } as const;
-
-// export type ResumeType = typeof resume;
