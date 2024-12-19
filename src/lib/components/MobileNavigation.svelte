@@ -65,7 +65,7 @@
 											</Drawer.Trigger>
 
 											<Drawer.Content
-												class="border-zinc-800/90 focus:ring-0 focus:ring-offset-0 dark:bg-zinc-800/90"
+												class="border-zinc-800 focus:ring-0 focus:ring-offset-0 dark:bg-zinc-800"
 											>
 												<nav class="m-4">
 													<ul class="py-6 text-end text-2xl text-zinc-800 dark:text-zinc-300">
